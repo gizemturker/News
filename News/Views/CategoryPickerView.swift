@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct CategoryPickerView: View {
-    @Binding var selectedCategory: Category
-    let categories: [Category]
+    @StateObject var sourceVM: SourceViewModel
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: [GridItem(.flexible())], spacing: 10) {
-                ForEach(categories, id: \.self) { category in
-                    CategoryItemView(category: category, isSelected: category == selectedCategory)
+                ForEach(Category.allCases) { category in
+                    CategoryItemView(category: category, isSelected: category == sourceVM.selectedCategory)
                         .onTapGesture {
-                            selectedCategory = category
+                            Task {
+                                await sourceVM.setSelectedCategory(category: category)
+                                await sourceVM.loadSources(category: category)
+                            }
                         }
                 }
-            }
+            }	
             .padding()
         }
     }

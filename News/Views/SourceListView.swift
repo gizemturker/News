@@ -13,6 +13,11 @@ struct SourceListView: View {
 
     var body: some View {
         NavigationView {
+            VStack(spacing: 0) {
+                VStack {
+                    CategoryPickerView(sourceVM: sourceVM)
+                }
+                .frame(height: 90)
                 
                 // List
                 List {
@@ -22,19 +27,19 @@ struct SourceListView: View {
                         }
                     }
                 }
-                .task {
-                    await sourceVM.loadSources(category: Category.general)
+                .onAppear {
+                    Task {
+                        await sourceVM.loadSources(category: sourceVM.selectedCategory)
+                    }
                 }
             }
-            .background(Color.blue)
-            .navigationBarTitle("Sources").foregroundColor(.white).background(Color.blue)
-          
+            .navigationBarTitleDisplayMode(.inline)
+//            .toolbar {
+//                // Toolbar
+//                ToolbarItem(placement: .principal) {
+//                    SourceHeaderView()
+//                }
+//            }
         }
-    }
-
-
-struct SourceListView_Previews: PreviewProvider {
-    static var previews: some View {
-        SourceListView()
     }
 }

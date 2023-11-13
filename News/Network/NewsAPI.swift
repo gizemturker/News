@@ -65,7 +65,7 @@ struct NewsAPI {
         }
     }
     
-     func fetchTopHeadlines(from url: URL) async throws -> [TopHeadline] {
+     func fetchTopHeadlines(url: URL) async throws -> [Article] {
         let (data, response) = try await session.data(from: url)
         
         guard let response = response as? HTTPURLResponse else {
@@ -106,7 +106,7 @@ struct NewsAPI {
         return URL(string: url)!
     }
     
-     func fetchTopHeadlineURL(from source: String) -> URL {
+     func fetchTopHeadlineURL(source: String) -> URL {
         var url = "https://newsapi.org/v2/top-headlines?"
         url += "apiKey=\(apiKey)"
         url += "&language=en"

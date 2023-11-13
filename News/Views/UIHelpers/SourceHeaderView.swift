@@ -9,15 +9,20 @@ import SwiftUI
 
 struct SourceHeaderView: View {
     var body: some View {
-        VStack {
+        VStack (){
             Text("Sources")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.blue)
+                .foregroundColor(Color("CategoryTextColor"))
+                .background(Color("HeaderColor"))
         }
-        .frame(height: 40)
+
+        .background(
+            Rectangle()
+            .fill(Color("HeaderColor"))
+            .frame(minWidth: 400, minHeight: 100)
+        )
+        
     }
 }
 

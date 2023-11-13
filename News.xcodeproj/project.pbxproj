@@ -30,9 +30,9 @@
 		C429921B2B01C26B006451FE /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429921A2B01C26B006451FE /* CategoryItemView.swift */; };
 		C429921D2B01C298006451FE /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429921C2B01C298006451FE /* CategoryPickerView.swift */; };
 		C42992282B01DEF9006451FE /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42992272B01DEF9006451FE /* BookmarkViewModel.swift */; };
-		C429922A2B027060006451FE /* TopHeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42992292B027060006451FE /* TopHeadline.swift */; };
 		C429922C2B02724D006451FE /* TopHeadlineAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429922B2B02724D006451FE /* TopHeadlineAPIResponse.swift */; };
 		C429922E2B029EC7006451FE /* SourceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429922D2B029EC7006451FE /* SourceHeaderView.swift */; };
+		C429923C2B02E41D006451FE /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429923B2B02E41D006451FE /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,9 +61,9 @@
 		C429921C2B01C298006451FE /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 		C429921E2B01C55F006451FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C42992272B01DEF9006451FE /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
-		C42992292B027060006451FE /* TopHeadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadline.swift; sourceTree = "<group>"; };
 		C429922B2B02724D006451FE /* TopHeadlineAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineAPIResponse.swift; sourceTree = "<group>"; };
 		C429922D2B029EC7006451FE /* SourceHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceHeaderView.swift; sourceTree = "<group>"; };
+		C429923B2B02E41D006451FE /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +125,7 @@
 				C429921A2B01C26B006451FE /* CategoryItemView.swift */,
 				C429921C2B01C298006451FE /* CategoryPickerView.swift */,
 				C42992002B019834006451FE /* ArticleRowView.swift */,
+				C429923B2B02E41D006451FE /* SliderView.swift */,
 				C429920C2B019A2B006451FE /* ArticleListView.swift */,
 				C42992122B019DB4006451FE /* ErrorView.swift */,
 				C42992102B019D85006451FE /* PlaceholderView.swift */,
@@ -149,7 +150,6 @@
 			children = (
 				C42991EB2B017454006451FE /* Source.swift */,
 				C42991ED2B017463006451FE /* Article.swift */,
-				C42992292B027060006451FE /* TopHeadline.swift */,
 				C42991F82B0175B6006451FE /* Category.swift */,
 				C42991FA2B017635006451FE /* DataRepository.swift */,
 				C42991F62B017593006451FE /* SourcesAPIResponse.swift */,
@@ -248,13 +248,13 @@
 				C429921B2B01C26B006451FE /* CategoryItemView.swift in Sources */,
 				C429922C2B02724D006451FE /* TopHeadlineAPIResponse.swift in Sources */,
 				C42992282B01DEF9006451FE /* BookmarkViewModel.swift in Sources */,
-				C429922A2B027060006451FE /* TopHeadline.swift in Sources */,
 				C42991F72B017593006451FE /* SourcesAPIResponse.swift in Sources */,
 				C42991FB2B017635006451FE /* DataRepository.swift in Sources */,
 				C429922E2B029EC7006451FE /* SourceHeaderView.swift in Sources */,
 				C42991EE2B017463006451FE /* Article.swift in Sources */,
 				C42992132B019DB4006451FE /* ErrorView.swift in Sources */,
 				C42991F32B0174F8006451FE /* SourceViewModel.swift in Sources */,
+				C429923C2B02E41D006451FE /* SliderView.swift in Sources */,
 				C42991DD2B0164B7006451FE /* ContentView.swift in Sources */,
 				C429921D2B01C298006451FE /* CategoryPickerView.swift in Sources */,
 				C42992032B019876006451FE /* ArticleViewModel.swift in Sources */,

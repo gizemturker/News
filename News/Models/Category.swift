@@ -16,12 +16,9 @@ enum Category: String, CaseIterable {
     case sports
     case technology
     
-   var text:String {
-       if self == .general {
-           return "Top Headlines"
-       }
-    return rawValue.capitalized
-  }
+    var texttext: String {
+        return self == .general ? "Top Headlines" : rawValue.capitalized
+    }
 }
 
 extension Category: Identifiable {
