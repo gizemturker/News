@@ -35,6 +35,7 @@
 		C429923C2B02E41D006451FE /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429923B2B02E41D006451FE /* SliderView.swift */; };
 		C441228C2B030C5000EA7439 /* BookmarkTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441228B2B030C5000EA7439 /* BookmarkTabView.swift */; };
 		C441228F2B031F7800EA7439 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441228E2B031F7800EA7439 /* TextViews.swift */; };
+		C44122932B03977500EA7439 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C44122922B03977500EA7439 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		C441228B2B030C5000EA7439 /* BookmarkTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTabView.swift; sourceTree = "<group>"; };
 		C441228E2B031F7800EA7439 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		C44122912B0326D400EA7439 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		C44122922B03977500EA7439 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 		C44122902B0326A900EA7439 /* SecureAPIKeys */ = {
 			isa = PBXGroup;
 			children = (
+				C44122922B03977500EA7439 /* Config.xcconfig */,
 				C44122912B0326D400EA7439 /* Config.xcconfig */,
 			);
 			path = SecureAPIKeys;
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C42991E22B0164B9006451FE /* Preview Assets.xcassets in Resources */,
+				C44122932B03977500EA7439 /* Config.xcconfig in Resources */,
 				C42991DF2B0164B9006451FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
