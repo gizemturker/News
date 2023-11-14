@@ -33,13 +33,14 @@ struct SourceListView: View {
                     }
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
-//            .toolbar {
-//                // Toolbar
-//                ToolbarItem(placement: .principal) {
-//                    SourceHeaderView()
-//                }
-//            }
+            .navigationBarTitle("Sources")
+                        .toolbarColorScheme(.dark, for: .navigationBar)
+                        .toolbarBackground(
+                            Color.blue,
+                            for: .navigationBar)
+                        .toolbarBackground(.visible, for: .navigationBar)
         }
     }
 }
+
+
