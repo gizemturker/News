@@ -12,6 +12,7 @@ class ArticleViewModel: ObservableObject {
     @Published var articles: [Article] = []
     @Published var headlines: [Article] = []
     private let newsAPI = NewsAPI.shared
+    
     func loadArticles(source: String) async {
     
         do {
@@ -27,5 +28,4 @@ class ArticleViewModel: ObservableObject {
         }
     
     }
-
-    }
+}

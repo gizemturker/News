@@ -16,16 +16,13 @@ struct SourceHeaderView: View {
                 .foregroundColor(Color("CategoryTextColor"))
                 .background(Color("HeaderColor"))
         }
-
         .background(
             Rectangle()
             .fill(Color("HeaderColor"))
             .frame(minWidth: 400, minHeight: 100)
         )
-        
     }
 }
-
 #Preview {
     SourceHeaderView()
 }

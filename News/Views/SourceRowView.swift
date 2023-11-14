@@ -8,30 +8,13 @@
 import SwiftUI
 
 struct SourceRowView: View {
-  
     let source: Source
-   
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text(source.name)
-                .font(.headline)
-                .lineLimit(1)
-                .foregroundColor(.blue)
-            Text(source.description)
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                .lineLimit(3)
+            SourceText(text: source.name)
+            LabelText(text: source.description)
         }
         .padding()
-
-//        .overlay(
-//            Rectangle().frame(height: 1).foregroundColor(.gray).padding(.top, -1),
-//            alignment: .top
-//        )
-//        .overlay(
-//            Rectangle().frame(height: 1).foregroundColor(.gray).padding(.bottom, -1),
-//            alignment: .bottom
-//        )
     }
 
 }

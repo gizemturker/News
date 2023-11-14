@@ -17,7 +17,8 @@ class SourceViewModel: ObservableObject {
     private let newsAPI = NewsAPI.shared
     
     func loadSources(category: Category) async {
-        print(category)
+//        print(category)
+        
         do {
             self.sources = try await newsAPI.fetchSources(url: newsAPI.fetchSourcesURL(category: category.rawValue))
             print(sources)
@@ -25,7 +26,6 @@ class SourceViewModel: ObservableObject {
         } catch {
             print(error.localizedDescription)
         }
-        
     }
     
     func setSelectedCategory(category: Category) async {

@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State var sources: [Article] = []
-
-    
     var body: some View {
         NavigationView {
             SourceListView()

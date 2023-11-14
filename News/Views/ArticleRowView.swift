@@ -15,6 +15,7 @@
 import SwiftUI
 
 struct ArticleRowView: View {
+    @EnvironmentObject var bookmarkVM: BookmarkViewModel
     let article: Article
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -45,27 +46,24 @@ struct ArticleRowView: View {
                     fatalError()
                 }
             }
-            .frame(minHeight: 200, maxHeight: 300)
+//            .frame(minHeight: 200, maxHeight: 300)
             .background(Color.gray.opacity(0.3))
             .clipped()
             
             VStack(alignment: .leading, spacing: 8) {
-                Text(article.title)
-                    .font(.headline)
-                    .lineLimit(3)
-                Text(article.description ?? "")
-                    .font(.subheadline)
-                    .lineLimit(2)
-                
+                LabelText(text: article.title)
+                DescText(text: article.description ?? "")
+                    .lineLimit(1)
                 HStack{
-                    Text(article.description ?? "")
-                        .lineLimit(1)
-                        .foregroundColor(.secondary)
-                        .font(.caption)
-                    
+                
                     Spacer()
                     
-
+                    Button{
+                        //
+                    } label: {
+                        Image(systemName: "bookmark")
+                    }
+                    .buttonStyle(.bordered)
                     
                     Button{
                         presentShareSheet(url: URL(string: article.url)!)
@@ -77,6 +75,14 @@ struct ArticleRowView: View {
                 }
             }
             .padding([.horizontal, .bottom])
+        }
+    }
+    
+    private func updateBookmarkStatus(for article: Article) {
+        if bookmarkVM.hasBookmark(for: article) {
+            bookmarkVM.removeBookmark(for: article)
+        } else {
+            bookmarkVM.addBookmark(for: article)
         }
     }
     
@@ -93,8 +99,9 @@ extension View {
 }
 
 struct ArticleRowView_Previews: PreviewProvider {
-  
+    @StateObject static var bookmarkVM = BookmarkViewModel.shared
     static var previews: some View {
+        
         NavigationView {
             List {
                 ArticleRowView(article: .previewData)
@@ -102,6 +109,7 @@ struct ArticleRowView_Previews: PreviewProvider {
             }
             .listStyle(.plain)
         }
+        .environmentObject(bookmarkVM)
      
     }
        

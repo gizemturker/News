@@ -9,7 +9,6 @@ import SwiftUI
 import SafariServices
 
 struct SafariWebView: UIViewControllerRepresentable {
-    
     let url: URL
     
     func makeUIViewController(context: Context) -> some SFSafariViewController {
@@ -17,5 +16,4 @@ struct SafariWebView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
-    
 }

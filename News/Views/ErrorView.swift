@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct ErrorView: View {
     let description: String
     let errorAction: () -> ()
@@ -28,7 +27,7 @@ struct ErrorView: View {
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
         ErrorView(description: "Error: Unable to complete the operation") {
-            // Error action (retry)
+            // Error action 
         }
     }
 }

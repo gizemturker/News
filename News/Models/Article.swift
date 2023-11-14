@@ -19,6 +19,14 @@ struct Article: Codable, Identifiable, Equatable {
     let urlToImage: String?
     let content: String
     
+    var articleURL: URL {
+        URL(string: url)!
+    }
+
+    var descriptionText: String {
+        description ?? ""
+    }
+    
     struct ArticleSource: Codable {
          let id: String?
          let name: String
@@ -35,25 +43,24 @@ struct Article: Codable, Identifiable, Equatable {
         case urlToImage
         case content
     }
-
-    
 }
-
-
 
 extension Article {
     static func ==(lhs: Article, rhs: Article) -> Bool {
         return lhs.id == rhs.id
     }
-    static let previewData = Article(
-         source: ArticleSource(
-            id: "", name: "BBC"
-        ),
+    static let previewData = 
+    Article(
+        source:
+            ArticleSource(
+            id: "",
+            name: "BBC"
+            ),
         title: "meta",
         url: "nil",
         publishedAt: Date(),
         author: "",
         description: "",
         urlToImage: "",
-    content: "")
+        content: "")
 }

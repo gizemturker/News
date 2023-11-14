@@ -33,6 +33,8 @@
 		C429922C2B02724D006451FE /* TopHeadlineAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429922B2B02724D006451FE /* TopHeadlineAPIResponse.swift */; };
 		C429922E2B029EC7006451FE /* SourceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429922D2B029EC7006451FE /* SourceHeaderView.swift */; };
 		C429923C2B02E41D006451FE /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429923B2B02E41D006451FE /* SliderView.swift */; };
+		C441228C2B030C5000EA7439 /* BookmarkTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441228B2B030C5000EA7439 /* BookmarkTabView.swift */; };
+		C441228F2B031F7800EA7439 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441228E2B031F7800EA7439 /* TextViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,9 @@
 		C429922B2B02724D006451FE /* TopHeadlineAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineAPIResponse.swift; sourceTree = "<group>"; };
 		C429922D2B029EC7006451FE /* SourceHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceHeaderView.swift; sourceTree = "<group>"; };
 		C429923B2B02E41D006451FE /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		C441228B2B030C5000EA7439 /* BookmarkTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTabView.swift; sourceTree = "<group>"; };
+		C441228E2B031F7800EA7439 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		C44122912B0326D400EA7439 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +104,7 @@
 				C429921E2B01C55F006451FE /* Info.plist */,
 				C42991DA2B0164B7006451FE /* NewsApp.swift */,
 				C42991DC2B0164B7006451FE /* ContentView.swift */,
+				C44122902B0326A900EA7439 /* SecureAPIKeys */,
 				C42991EF2B0174B1006451FE /* Network */,
 				C42991EA2B01741A006451FE /* Models */,
 				C42991E92B0164CF006451FE /* ViewModels */,
@@ -121,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				C42991F42B017514006451FE /* SourceRowView.swift */,
+				C441228B2B030C5000EA7439 /* BookmarkTabView.swift */,
 				C42991FC2B018CA2006451FE /* SourceListView.swift */,
 				C429921A2B01C26B006451FE /* CategoryItemView.swift */,
 				C429921C2B01C298006451FE /* CategoryPickerView.swift */,
@@ -152,9 +159,7 @@
 				C42991ED2B017463006451FE /* Article.swift */,
 				C42991F82B0175B6006451FE /* Category.swift */,
 				C42991FA2B017635006451FE /* DataRepository.swift */,
-				C42991F62B017593006451FE /* SourcesAPIResponse.swift */,
-				C429920A2B0199D7006451FE /* NewsAPIResponse.swift */,
-				C429922B2B02724D006451FE /* TopHeadlineAPIResponse.swift */,
+				C441228D2B031ABE00EA7439 /* Response */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,8 +176,27 @@
 			isa = PBXGroup;
 			children = (
 				C429922D2B029EC7006451FE /* SourceHeaderView.swift */,
+				C441228E2B031F7800EA7439 /* TextViews.swift */,
 			);
 			path = UIHelpers;
+			sourceTree = "<group>";
+		};
+		C441228D2B031ABE00EA7439 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				C42991F62B017593006451FE /* SourcesAPIResponse.swift */,
+				C429920A2B0199D7006451FE /* NewsAPIResponse.swift */,
+				C429922B2B02724D006451FE /* TopHeadlineAPIResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		C44122902B0326A900EA7439 /* SecureAPIKeys */ = {
+			isa = PBXGroup;
+			children = (
+				C44122912B0326D400EA7439 /* Config.xcconfig */,
+			);
+			path = SecureAPIKeys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C429921B2B01C26B006451FE /* CategoryItemView.swift in Sources */,
+				C441228F2B031F7800EA7439 /* TextViews.swift in Sources */,
 				C429922C2B02724D006451FE /* TopHeadlineAPIResponse.swift in Sources */,
 				C42992282B01DEF9006451FE /* BookmarkViewModel.swift in Sources */,
 				C42991F72B017593006451FE /* SourcesAPIResponse.swift in Sources */,
+				C441228C2B030C5000EA7439 /* BookmarkTabView.swift in Sources */,
 				C42991FB2B017635006451FE /* DataRepository.swift in Sources */,
 				C429922E2B029EC7006451FE /* SourceHeaderView.swift in Sources */,
 				C42991EE2B017463006451FE /* Article.swift in Sources */,
@@ -277,6 +303,7 @@
 /* Begin XCBuildConfiguration section */
 		C42991E32B0164B9006451FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C44122912B0326D400EA7439 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -340,6 +367,7 @@
 		};
 		C42991E42B0164B9006451FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C44122912B0326D400EA7439 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

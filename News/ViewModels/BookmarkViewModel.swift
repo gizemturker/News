@@ -9,7 +9,7 @@ import SwiftUI
 
 @MainActor
 class BookmarkViewModel: ObservableObject {
-    
+    @StateObject var articleVM = ArticleViewModel()
     @Published private(set) var bookmarks: [Article] = []
     private let bookmarkData = PlistDataRepository<[Article]>(filename: "bookmarks")
     

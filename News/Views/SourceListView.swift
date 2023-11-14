@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SourceListView: View {
     @StateObject var sourceVM = SourceViewModel()
-
+    @EnvironmentObject var bookmarkVM: BookmarkViewModel
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
